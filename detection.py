@@ -275,7 +275,7 @@ def backdoor_identification():
     print("Potential target can be {}, with AQI = {}".format(target, aqi))
 
     print("Saving identified trigger")
-    trigger = masks[0] * pattern
+    trigger = masks[target] * patterns[target]
     image = transforms.ToPILImage()(trigger.permute(2,0,1)).convert("RGB")
     image.save("RTrigger/cnnTrigger.png")
 
