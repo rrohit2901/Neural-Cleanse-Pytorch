@@ -37,7 +37,7 @@ def load_dataset_util(data_filename):
     dataset = {}
 
     if os.path.exists("testPickle"):
-        dbfile = open('dataPickle', 'rb')     
+        dbfile = open('testPickle', 'rb')     
         dataset = pickle.load(dbfile)
         dbfile.close()
         return dataset
