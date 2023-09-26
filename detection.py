@@ -37,7 +37,7 @@ def load_dataset_util(data_filename):
     dataset = {}
 
     if os.path.exists("testPickle"):
-        dbfile = open('dataPickle', 'rb')     
+        dbfile = open('testPickle', 'rb')     
         dataset = pickle.load(dbfile)
         dbfile.close()
         return dataset
@@ -66,8 +66,8 @@ def load_dataset_util(data_filename):
 def load_dataset(data_file=DATA_DIR):
 
     dataset = load_dataset_util(data_file)
-    X_test = dataset['X_train']
-    Y_test = dataset['Y_train']
+    X_test = dataset['X_test']
+    Y_test = dataset['Y_test']
 
     return X_test, Y_test
 
